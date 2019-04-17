@@ -25,13 +25,17 @@ public class CalTest {
 //		2.
 //		정수 400이 짝수인지 판별하세요.
 //		(2로 나누어서 나머지가 0이면 짝수,나머지 연산자)
-		int num3 = 400;
+		int num3 = 500;
 		int result2 = num3 % 2; 
 		if(result2 == 0) {
 			System.out.println("짝수");
 		}else {
 			System.out.println("홀수");
 		}
+		
+		System.out.println("----삼항연산자로 출력");
+		
+		System.out.println(result2 == 0 ? "짝수" : "홀수" );
 		
 		
 	}
