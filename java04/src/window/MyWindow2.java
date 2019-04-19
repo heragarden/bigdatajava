@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 
-public class MyWindow {
+public class MyWindow2 {
 
 	public static void main(String[] args) {
 		//프레임
@@ -52,9 +52,6 @@ public class MyWindow {
 				String data = text.getText();
 				System.out.println("당신의 주요 과목은 : " + data);
 				
-				String data2 = text2.getText();
-				System.out.println("당신의 주요 툴은 : " + data2);
-				
 			}
 		});
 		
@@ -66,6 +63,18 @@ public class MyWindow {
 		f.getContentPane().add(label2);
 		f.getContentPane().add(text2);
 		f.getContentPane().add(button);
+		
+		JButton button2 = new JButton("나도 눌러요");
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String data2 = text2.getText();
+				System.out.println("당신의 주요 툴은 : " + data2);
+			}
+		});
+		button2.setBackground(Color.MAGENTA);
+		button2.setForeground(Color.CYAN);
+		button2.setFont(new Font("굴림", Font.BOLD, 26));
+		f.getContentPane().add(button2);
 		
 		f.setVisible(true);
 	}
